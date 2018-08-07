@@ -1,7 +1,7 @@
 (function () {
   
   // 首页
-  $(".an-video").height($(window).height());
+  $(".an-video").height(($(window).height()-80));
   $(".head-search").on("click", function () {
     $(".head-wrapper").addClass("head-search-show");
   });

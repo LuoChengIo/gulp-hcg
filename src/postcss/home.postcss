@@ -1,0 +1,253 @@
+.vidoelist {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+.swiper-pagination-bullet-active{
+  background-color: #fcc800;
+}
+/* 视频样式 */
+.an-video {
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+  z-index: 0;
+}
+.an-video .palybut {
+  position: absolute;
+  z-index: 1;
+  top:50%;
+  top:calc(50% + 80px);
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100px;
+  height: 100px;
+  border: 10px solid #fcc800;
+  border-radius: 999px;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+}
+.an-video .palybut:after{
+  content: '';
+  display: inline-block;
+  width:0;
+  height:0;
+  margin-top: 22px;
+  margin-left: 9px;
+  border-width:20px 0 20px 20px;
+  border-style:solid;
+  border-color:transparent transparent transparent #fcc800;/*透明 透明 透明 灰*/
+}
+.an-video-mask {
+  width: 100%;
+  height: 100%;
+  background: url(../images/video-preload.jpg) center center no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.vlistcont {
+  position: relative;
+}
+.vlistcont .zahimg {
+  display: block;
+  width: 100%;
+}
+.vlistcont .vlistpage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.vli-close{
+  position: absolute;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  color: #fff;
+  border-radius: 50%;
+  background: url(../images/icon/close.png) center no-repeat;
+  background-color: rgba(0, 0, 0, .5);
+  background-size: 30%;
+  bottom: -60px;
+  margin-left: -22px;
+}
+/* 广告板块 */
+.content-section {
+  width: 100%;
+  margin: 12px 0;
+}
+.grandmaster img{
+  max-height: 800px;
+}
+.content-section.an-section1 {
+  background: url(../images/banner1.jpg) center center no-repeat #fcc800;
+  background-size: contain;
+}
+
+.diamond {
+  margin-top: 12px;
+  height: auto;
+}
+.diamond .row {
+  padding: 0 6px;
+}
+.diamond .row>div {
+  margin-bottom: 12px;
+  padding: 0 6px;
+}
+.diamond .row>div a {
+  position: relative;
+  display: block;
+  color: #ffffff;
+}
+.diamond .row>div a:hover .diamond-mask {
+  display: block;
+}
+.diamond-mask {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(16, 65, 147, 0.8);
+  text-align: center;
+  padding-top: 30%;
+}
+.diamond-mask h4 {
+  font-size: 38px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+.diamond-mask p {
+  font-size: 14px;
+  letter-spacing: 5px;
+}
+/* 小屏幕（平板，大于等于 768px） */
+@media (max-width: 768px) {
+  .diamond .row {
+   padding: 0;
+  }
+  .diamond .row>div {
+    padding: 0;
+  }
+}
+
+/* 产品轮播 */
+
+
+/* 底部导航 */
+.footer-nav {
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+.footer-nav h4 {
+  color: #fcc800;
+  font-size: 30px;
+  letter-spacing: 26px;
+  font-family: "FangSong";
+  margin-bottom: 0px;
+}
+.footer-nav h5 {
+  margin-top: 10px;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+.footer-nav ul {
+  position: relative;
+  font-size: 0;
+}
+.footer-nav ul:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 1px;
+  height:100%;
+  background: #c2c2c2;
+  z-index: 9;
+}
+.footer-nav ul:after {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: -3px;
+  width: 20px;
+  height: 4px;
+  background: #f51650;
+  z-index: 9;
+}
+.footer-nav ul.brand-list:after {
+  background: #a170dc;
+}
+.footer-nav ul.contact-list:after {
+  background: #00d9cc;
+}
+.footer-nav ul li {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.footer-nav ul a {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #929292;
+}
+.footer-nav ul a:hover {
+  color: #5f5f5f;
+}
+.footer-nav .news-list li {
+  width: 49%;
+  padding-right: 30px; 
+  display: inline-block; 
+}
+.footer-nav .brand-list li {
+  width:  49%;
+  display: inline-block;
+}
+.footer-nav .contact-list li {
+}
+
+/* 小屏幕（平板，大于等于 768px） */
+@media (max-width: 768px) {
+  .footer-nav h5{
+    text-align: center;
+    font-size: 28px;
+  }
+  .footer-nav h4{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 28px;
+    text-indent: 1em;
+  }
+  .footer-nav ul{
+    padding-left: 16px;
+  }
+  .footer-nav ul:after{
+    left: -9px;
+  }
+  .footer-nav ul:before{
+    left: 8px;
+  }
+}
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+/* @media (min-width: @screen-md-min) { ... } */
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+/* @media (min-width: @screen-lg-min) { ... } */
