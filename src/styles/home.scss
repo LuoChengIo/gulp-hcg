@@ -118,12 +118,177 @@
     height: auto;
     overflow: hidden;
     background-color: #f2f2f2;
+    .container-base {
+      padding: 0 0 0 6.77% ;
+    }
     .left{
       float: left;
       width: 398px;
     }
     .right{
       margin-left: 398px;
+      padding: 30px 0 0 18px;
+      .list-top{
+        padding: 15px 0;
+        border-bottom:  1px solid #c1c1c1;
+        h4{
+          font-size: 34px;
+          color: #fcc800;
+          letter-spacing: .8em;
+          font-weight: normal;
+        }
+        p{
+          margin-top: 10px;
+          font-size: 28px;
+          line-height: 1.2;
+          color: #585858;
+        }
+      }
+      .top-tabs{
+        position: absolute;
+        right: 0;
+        bottom: -1px;
+        padding-right: 6.77%;
+        li{
+          display: inline-block; 
+          margin:  0 5px;
+          font-size: 16px;
+          border-bottom: 2px solid transparent;
+          transition: all .3s;
+          a{
+            display: inline-block;
+            padding: 10px;
+            color: #323232;
+          }
+          &.active{
+            border-color: #fcc800;
+          }
+          &:hover{
+            border-color: #fcc800;
+          }
+        }
+      }
+      .in-list{
+        position: relative;
+        padding-top: 20px;
+        padding-right: 6.77%;
+        .swiper-container{
+          max-width: 1150px;
+          margin: 0;
+        }
+        .g-wt{
+          max-width: 1150px;
+        }
+        .in-item{
+          position: absolute;
+          top: 20px;
+          left: 0;
+          color: #929292;
+          background-color: #f2f2f2;
+          opacity: 0;
+          a{
+            color: #929292;
+            &:hover{
+              color: #929292;
+            }
+          }
+          &.active{
+            opacity: 1;
+            z-index: 1;
+          }
+          & .ab{
+            padding-bottom: 30px;
+            border-bottom: 1px dashed #929292;
+          }
+          & .ab>h2{
+            margin: 18px 0 18px 0;
+            font-size: 18px;
+            color: #927152;
+          }
+          & .ab>p{
+            font-size: 14px;
+            margin-bottom: 5px;
+           }
+          & .ac{
+            padding-top: 30px;
+          }
+          & .ac>h3{
+            margin-bottom: 12px;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          & .ac>p{
+            position: relative;
+            text-indent: .5em;
+            margin-bottom: 12px;
+            font-size: 14px;
+            padding-right: 30px;
+          }
+          & .ac>p:before{
+           content: '';
+           position: absolute;
+           top: 10px;
+           left: 0;
+           width: 5px;
+           height: 5px;
+           border-radius: 50%;
+           background-color: #929292;
+          }
+          .n-btn{
+            float: right;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            background-color: #bebebe;
+            color: #fff;
+            margin-right: 10px;
+            cursor: pointer;
+            &:hover{
+              background-color: #969696;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  .wap-pro-list{
+    .w-title{
+      padding: 60px 0 30px 0;
+      text-align: center;
+      h4{
+        font-size: 24px;
+        letter-spacing: .8em;
+        color: #fcc800;
+        text-indent: .8em;
+        margin-bottom: 8px;
+      }
+      p{
+        font-size: 25px;
+      }
+    }
+    .w-item{
+      p{
+        margin: 14px 0 30px;
+        font-size: 16px;
+        color: #fcc800;
+      }
+    }
+    .btn-warp{
+      padding: 50px 20px;
+      border-bottom: 5px solid #f2f2f2;
+      .more-btn{
+        display: block;
+        background-color:#fcc800;
+        border-radius: 90px; 
+        font-size: 16px;
+        line-height: 40px;
+        height: 40px;
+        color: #fff;
+        text-align: center;
+      }
     }
   }
   /* 底部导航 */
@@ -209,12 +374,12 @@
         }
         h5{
           text-align: center;
-          font-size: 28px;
+          font-size: 25px;
         }
         h4{
           text-align: center;
           margin-top: 50px;
-          font-size: 28px;
+          font-size: 24px;
           text-indent: 1em;
         }
         ul{

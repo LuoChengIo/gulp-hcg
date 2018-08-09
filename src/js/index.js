@@ -45,18 +45,44 @@
       el: '.swiper-pagination',
     },
   });
-  // var mySwiper = new Swiper('.swiper-container', {
-  //   autoplay: true,//可选选项，自动滑动
-  //   pagination: {
-  //     el: '.top-tabs',
-  //     bulletElement : 'li',
-  //     type: 'custom',
-  //     clickable: true,
-  //   },
-  // });
-  $('.top-tabs').on('click','li',function(){
+  // 系列产品tab切换处理
+  $('.top-tabs .tl').on('click',function(){
     var index = $(this).index();
     $(this).addClass('active').siblings().removeClass("active");
-    $(".pt-container>div").eq(index).addClass("active").siblings().removeClass("active");
+    $(".in-list>.in-item").eq(index).addClass("active").siblings().removeClass("active");
    })
+   //产品展示处理
+   new Swiper('.aswiper', {
+    slidesPerView: 3,
+    spaceBetween: 15,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: '.aswiper-next',
+      prevEl: '.aswiper-prev',
+    },
+  });
+  new Swiper('.bswiper', {
+    slidesPerView: 3,
+    spaceBetween: 15,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: '.bswiper-next',
+      prevEl: '.bswiper-prev',
+    },
+  });
+  new Swiper('.cswiper', {
+    slidesPerView: 3,
+    spaceBetween: 15,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: '.cswiper-next',
+      prevEl: '.cswiper-prev',
+    },
+  });
 })()

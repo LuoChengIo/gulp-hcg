@@ -174,50 +174,34 @@
       </div>
     </div>
 
-    <!--系列产品-->
-    <div class="production-list">
+    <!--电脑显示的系列产品-->
+    <div class="production-list hidden-xs" >
       <div class="container-base">
         <div class="left">
           <img class="img-responsive" src="./images/left-ad.jpg" />
         </div>
-        <div class="right"></div>
-        <!-- <div class="pro-tisl visible-xs-block">
+        <div class="right">
+          <!-- tab切换 -->
+          <div class="list-top rel">
             <h4>HUZIGUAN</h4>
-            <p>系列产品</p>
-        </div> -->
-        <!-- <div class="row">
-          <div class="col-sm-3 col-md-3 production-left hidden-xs">
-            <img src="./images/left-ad.jpg" />
+            <p>系列產品</p>
+            <ul class="top-tabs r" >
+              <li class="active tl"><a href="javascript:;">全部产品</a></li>
+              <li class="tl"><a href="javascript:;">大师级系列</a></li>
+              <li class="tl"><a href="javascript:;">秘酿年份系列</a></li>
+              <li><a href="#">更多+</a></li>
+            </ul>
           </div>
-          <div class=" col-sm-9 col-md-9 production-right">
-            <div class="list-top hidden-xs">
-              <h4>HUZIGUAN</h4>
-              <p>系列产品</p>
-              <ul class="nav top-tabs" >
-                <li class="active"><a href="javascript:;">全部产品</a></li>
-                <li><a href="#javascript:;">大师级系列</a></li>
-                <li><a href="javascript:;">秘酿年份系列</a></li>
-                <a href="#">更多</a>
-              </ul>
-            </div>
-            <div class="pt-container">
-              <div class="slide row active">
-                <div class=" col-sm-4 col-md-4 item">
-                  <img src="./images/list1.jpg" />
-                  <div class="ab hidden-xs">
-                    <h2>华滋馆 · 十斤坛装鉴藏大师</h2>
-                    <p>规格：（5000ml×1）×1盒</p>
-                    <p>酒精度：53%vol</p>
-                  </div>
-                  <div class="ac hidden-xs">
-                    <h3>盛世九州 · 和贵天下</h3>
-                    <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为....</p>
-                  </div>
-                </div>
-                <div class=" col-sm-4 col-md-4 item">
-                  <img src="./images/list1.jpg" />
-                  <div class="ab hidden-xs">
-                      <h2>华滋馆 · 十斤坛装鉴藏大师</h2>
+          <!-- tab内容 -->
+          <div class="in-list">
+            <!-- 全部产品 -->
+            <div class="in-item active">
+              <div class="swiper-container aswiper">
+                <div class="swiper-wrapper">
+                  <a href="www.baidu.com" target="_blank" class="swiper-slide">
+                    <img class="img-responsive" src="./images/list1.jpg" />
+                    <div class="ab hidden-xs">
+                      <h2>1华滋馆 · 十斤坛装鉴藏大师</h2>
                       <p>规格：（5000ml×1）×1盒</p>
                       <p>酒精度：53%vol</p>
                     </div>
@@ -225,28 +209,206 @@
                       <h3>盛世九州 · 和贵天下</h3>
                       <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为....</p>
                     </div>
-                </div>
-                <div class=" col-sm-4 col-md-4 item">
-                  <img src="./images/list1.jpg" />
-                  <div class="ab hidden-xs">
-                      <h2>华滋馆 · 十斤坛装鉴藏大师</h2>
-                      <p>规格：（5000ml×1）×1盒</p>
-                      <p>酒精度：53%vol</p>
-                    </div>
-                    <div class="ac hidden-xs">
-                      <h3>盛世九州 · 和贵天下</h3>
-                      <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为....</p>
-                    </div>
+                  </a>
+                  <a href="www.baidu.com" target="_blank" class="swiper-slide">
+                      <img class="img-responsive" src="./images/list1.jpg" />
+                      <div class="ab hidden-xs">
+                        <h2>华滋馆 · 十斤坛装鉴藏大师</h2>
+                        <p>规格：（5000ml×1）×1盒</p>
+                        <p>酒精度：53%vol</p>
+                      </div>
+                      <div class="ac hidden-xs">
+                        <h3>盛世九州 · 和贵天下</h3>
+                        <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为....</p>
+                      </div>
+                  </a>
+                  <a href="www.baidu.com" target="_blank" class="swiper-slide">
+                      <img class="img-responsive" src="./images/list1.jpg" />
+                      <div class="ab hidden-xs">
+                        <h2>华滋馆 · 十斤坛装鉴藏大师</h2>
+                        <p>规格：（5000ml×1）×1盒</p>
+                        <p>酒精度：53%vol</p>
+                      </div>
+                      <div class="ac hidden-xs">
+                        <h3>盛世九州 · 和贵天下</h3>
+                        <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为....</p>
+                      </div>
+                  </a>
+                  <a href="www.baidu.com" target="_blank" class="swiper-slide">
+                      <img class="img-responsive" src="./images/list1.jpg" />
+                      <div class="ab hidden-xs">
+                        <h2>华滋馆 · 十斤坛装鉴藏大师</h2>
+                        <p>规格：（5000ml×1）×1盒</p>
+                        <p>酒精度：53%vol</p>
+                      </div>
+                      <div class="ac hidden-xs">
+                        <h3>盛世九州 · 和贵天下</h3>
+                        <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为....</p>
+                      </div>
+                  </a>
                 </div>
               </div>
-              <div class="slide row">slider2</div>
-              <div class="slide row">slider3</div>
+              <!-- 上下切换按钮 -->
+              <div class="g-wt clearfix pt30">
+                <div class="n-btn aswiper-next">
+                  <i class="iconfont icon-arrowdown"></i>
+                </div>
+                <div class="n-btn aswiper-prev">
+                  <i class="iconfont icon-arrowup"></i>
+                </div>
+              </div>
+            </div>
+            <!-- 大师级系列 -->
+            <div class="in-item">
+              <div class="swiper-container bswiper">
+                <div class="swiper-wrapper">
+                  <a href="www.baidu2.com" target="_blank" class="swiper-slide">
+                    <img class="img-responsive" src="./images/list1.jpg" />
+                    <div class="ab hidden-xs">
+                      <h2>2华滋馆 · 十斤坛装鉴藏大师</h2>
+                      <p>规格：（5000ml×1）×1盒</p>
+                      <p>酒精度：53%vol</p>
+                    </div>
+                    <div class="ac hidden-xs">
+                      <h3>盛世九州 · 和贵天下</h3>
+                      <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为....</p>
+                    </div>
+                  </a>
+                  <a href="www.baidu.com" target="_blank" class="swiper-slide">
+                      <img class="img-responsive" src="./images/list1.jpg" />
+                      <div class="ab hidden-xs">
+                        <h2>华滋馆 · 十斤坛装鉴藏大师</h2>
+                        <p>规格：（5000ml×1）×1盒</p>
+                        <p>酒精度：53%vol</p>
+                      </div>
+                      <div class="ac hidden-xs">
+                        <h3>盛世九州 · 和贵天下</h3>
+                        <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为....</p>
+                      </div>
+                  </a>
+                  <a href="www.baidu.com" target="_blank" class="swiper-slide">
+                      <img class="img-responsive" src="./images/list1.jpg" />
+                      <div class="ab hidden-xs">
+                        <h2>华滋馆 · 十斤坛装鉴藏大师</h2>
+                        <p>规格：（5000ml×1）×1盒</p>
+                        <p>酒精度：53%vol</p>
+                      </div>
+                      <div class="ac hidden-xs">
+                        <h3>盛世九州 · 和贵天下</h3>
+                        <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为....</p>
+                      </div>
+                  </a>
+                  <a href="www.baidu.com" target="_blank" class="swiper-slide">
+                      <img class="img-responsive" src="./images/list1.jpg" />
+                      <div class="ab hidden-xs">
+                        <h2>华滋馆 · 十斤坛装鉴藏大师</h2>
+                        <p>规格：（5000ml×1）×1盒</p>
+                        <p>酒精度：53%vol</p>
+                      </div>
+                      <div class="ac hidden-xs">
+                        <h3>盛世九州 · 和贵天下</h3>
+                        <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为....</p>
+                      </div>
+                  </a>
+                </div>
+              </div>
+              <!-- 上下切换按钮 -->
+              <div class="g-wt clearfix pt30">
+                <div class="n-btn bswiper-next">
+                  <i class="iconfont icon-arrowdown"></i>
+                </div>
+                <div class="n-btn bswiper-prev">
+                  <i class="iconfont icon-arrowup"></i>
+                </div>
+              </div>
+            </div>
+            <!-- 秘酿年份系列 -->
+            <div class="in-item">
+              <div class="swiper-container cswiper">
+                <div class="swiper-wrapper">
+                  <a href="www.baidu3.com" target="_blank" class="swiper-slide">
+                    <img class="img-responsive" src="./images/list1.jpg" />
+                    <div class="ab hidden-xs">
+                      <h2>3华滋馆 · 十斤坛装鉴藏大师</h2>
+                      <p>规格：（5000ml×1）×1盒</p>
+                      <p>酒精度：53%vol</p>
+                    </div>
+                    <div class="ac hidden-xs">
+                      <h3>盛世九州 · 和贵天下</h3>
+                      <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为....</p>
+                    </div>
+                  </a>
+                  <a href="www.baidu.com" target="_blank" class="swiper-slide">
+                      <img class="img-responsive" src="./images/list1.jpg" />
+                      <div class="ab hidden-xs">
+                        <h2>华滋馆 · 十斤坛装鉴藏大师</h2>
+                        <p>规格：（5000ml×1）×1盒</p>
+                        <p>酒精度：53%vol</p>
+                      </div>
+                      <div class="ac hidden-xs">
+                        <h3>盛世九州 · 和贵天下</h3>
+                        <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为....</p>
+                      </div>
+                  </a>
+                  <a href="www.baidu.com" target="_blank" class="swiper-slide">
+                      <img class="img-responsive" src="./images/list1.jpg" />
+                      <div class="ab hidden-xs">
+                        <h2>华滋馆 · 十斤坛装鉴藏大师</h2>
+                        <p>规格：（5000ml×1）×1盒</p>
+                        <p>酒精度：53%vol</p>
+                      </div>
+                      <div class="ac hidden-xs">
+                        <h3>盛世九州 · 和贵天下</h3>
+                        <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为....</p>
+                      </div>
+                  </a>
+                  <a href="www.baidu.com" target="_blank" class="swiper-slide">
+                      <img class="img-responsive" src="./images/list1.jpg" />
+                      <div class="ab hidden-xs">
+                        <h2>华滋馆 · 十斤坛装鉴藏大师</h2>
+                        <p>规格：（5000ml×1）×1盒</p>
+                        <p>酒精度：53%vol</p>
+                      </div>
+                      <div class="ac hidden-xs">
+                        <h3>盛世九州 · 和贵天下</h3>
+                        <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为....</p>
+                      </div>
+                  </a>
+                </div>
+              </div>
+              <!-- 上下切换按钮 -->
+              <div class="g-wt clearfix pt30">
+                <div class="n-btn cswiper-next">
+                  <i class="iconfont icon-arrowdown"></i>
+                </div>
+                <div class="n-btn cswiper-prev">
+                  <i class="iconfont icon-arrowup"></i>
+                </div>
+              </div>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
-
+    <!-- 移动的显示的系列产品 -->
+    <div class="wap-pro-list visible-xs-block">
+      <div class="w-title">
+          <h4>HUZIGUAN</h4>
+          <p>系列產品</p>
+      </div>
+      <!-- 产品展示 -->
+      <a href="www.baidu.com" target="_blank" class="db w-item">
+        <img class="img-responsive pct100" src="./images/list1.jpg" />
+        <p class="tc">华滋馆 · 十斤坛装鉴藏大师</p>
+      </a>
+      <a href="www.baidu.com" target="_blank" class="db w-item">
+        <img class="img-responsive pct100" src="./images/list1.jpg" />
+        <p class="tc">华滋馆 · 十斤坛装鉴藏大师</p>
+      </a>
+      <div class="btn-warp">
+        <a href="www.baidu.com" target="_blank" class="more-btn">更多商品展示	&gt;</a>
+      </div>
+    </div>
     <!--底部导航列表-->
     <div class="footer-nav">
       <div class="container-base">
