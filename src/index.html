@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>Bootstrap 101 Template</title>
+    <title>首页</title>
     <!-- Bootstrap -->
     <link href="./css/lib/bootstrap.min.css" rel="stylesheet">
     <link href="./css/lib/swiper.min.css" rel="stylesheet">
@@ -19,8 +19,8 @@
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <!--头部导航-->
+  <body class="page-home">
+    <!--头部导航 head.html-->
     <nav class="navbar navbar-default custom-navbar">
       <div class="container-base">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -38,7 +38,6 @@
             <img src="./images/pc-logo.png" />
           </a>
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right an-nav">
@@ -90,24 +89,34 @@
       </div><!-- /.container-fluid -->
     </nav>
     <!--视频-->
-    <div class="an-video">
-      <video id="player-Abbreviated" class="video-js vidoelist vjs-big-play-centered" muted="true" autoplay loop playsinline="true" preload="auto" poster="/image/idx-bg-01.7589b895.jpg">
-        <source src="https://www.zhangxinxu.com/study/media/cat.mp4" type="video/mp4">
+    <div class="in-video">
+      <!-- 上传的视频必须是16:9视频比例的，否则无法全屏适配 -->
+      <video id="player-Abbreviated" class="video-js vidoelist vjs-big-play-centered" muted="true" autoplay loop playsinline="true" preload="auto" data-setup="{}"  poster="/image/idx-bg-01.7589b895.jpg">
+        <source src="https://gw.alicdn.com/bao/uploaded/LB1bC41LVXXXXcGXFXXXXXXXXXX.mp4?spm=a1z3i.a4.0.0.NsEk6Q&file=LB1bC41LVXXXXcGXFXXXXXXXXXX.mp4" type="video/mp4">
+          <!-- <source src="https://www.zhangxinxu.com/study/media/cat.mp4" type="video/mp4"> -->
       </video>
-      <div class="palybut poi" data-toggle="modal" data-target="#myModal"></div>
+      <div class="video-mask">
+        <!-- <div class="palybut poi" data-toggle="modal" data-target="#myModal"></div> -->
+        <div class="palybut poi"></div>
+      </div>
     </div>
-
     <!--轮播-->
     <div class="content-section swiper swiper-container grandmaster">
       <div class="swiper-wrapper">
           <div class="swiper-slide">
             <a href="javascript:" class="db">
-              <img class="db pct100" src="./images/swiper1.jpg" alt="" srcset="">
+              <!-- pc端显示的图片 -->
+              <img class="img-responsive center-block pct100 hidden-xs" src="./images/swiper1.jpg" alt="" srcset="">
+              <!-- 移动端显示的图片 -->
+              <img class="img-responsive center-block pct100 visible-xs-block" src="./images/wap-swiper.png" alt="" srcset="">
             </a>
           </div>
           <div class="swiper-slide">
               <a href="javascript:" class="db">
-                <img class="db pct100" src="./images/swiper1.jpg" alt="" srcset="">
+                <!-- pc端显示的图片 -->
+                <img class="img-responsive center-block pct100 hidden-xs" src="./images/swiper1.jpg" alt="" srcset="">
+                <!-- 移动端显示的图片 -->
+                <img class="img-responsive center-block pct100 visible-xs-block" src="./images/wap-swiper.png" alt="" srcset="">
               </a>
           </div>
         </div>
@@ -115,64 +124,68 @@
         <div class="swiper-pagination"></div>
     </div>
     <!--banner广告-->
-    <div class="content-section an-section1">
+    <div class="content-section">
       <a href="javascript:" class="db">
-        <img class="db pct100" src="./images/banner1.jpg" alt="" srcset="">
+        <!-- pc端显示的图片 -->
+        <img class="img-responsive center-block pct100 hidden-xs" src="./images/banner1.jpg" alt="" srcset="">
+        <!-- 移动端显示的图片 -->
+        <img class="img-responsive center-block pct100 visible-xs-block" src="./images/wap-banner.jpg" alt="" srcset="">
       </a>
     </div>
-
     <!--小块广告-->
     <div class="content-section diamond">
-      <div class="container-fluid">
-        <div class="row">
-          <div class=" col-sm-6 col-md-6">
-            <a href="#">
-              <img class="img-responsive" src="./images/block1.jpg" />
-              <div class="diamond-mask">
-                <h4>華滋館优势</h4>
-                <p>系出名門 · 醬酒發源地</p>
-              </div>
-            </a>
-          </div>
-          <div class=" col-sm-6 col-md-6">
-            <a href="#">
-              <img class="img-responsive" src="./images/block2.jpg" />
-              <div class="diamond-mask">
-                <h4>華滋館优势</h4>
-                <p>系出名門 · 醬酒發源地</p>
-              </div>
-            </a>
-          </div>
-          <div class=" col-sm-6 col-md-6">
-            <a href="#">
-              <img class="img-responsive" src="./images/block3.jpg" />
-              <div class="diamond-mask">
-                <h4>華滋館优势</h4>
-                <p>系出名門 · 醬酒發源地</p>
-              </div>
-            </a>
-          </div>
-          <div class=" col-sm-6 col-md-6">
-            <a href="#">
-              <img class="img-responsive" src="./images/block4.jpg" />
-              <div class="diamond-mask">
-                <h4>華滋館优势</h4>
-                <p>系出名門 · 醬酒發源地</p>
-              </div>
-            </a>
-          </div>
+      <div class="row">
+        <div class=" col-sm-6 col-md-6 item">
+          <a href="#">
+            <img class="img-responsive ism" src="./images/block1.jpg" />
+            <div class="diamond-mask">
+              <h4>華滋館优势</h4>
+              <p>系出名門 · 醬酒發源地</p>
+            </div>
+          </a>
+        </div>
+        <div class=" col-sm-6 col-md-6 item">
+          <a href="#">
+            <img class="img-responsive ism" src="./images/block2.jpg" />
+            <div class="diamond-mask">
+              <h4>華滋館优势</h4>
+              <p>系出名門 · 醬酒發源地</p>
+            </div>
+          </a>
+        </div>
+        <div class=" col-sm-6 col-md-6 item">
+          <a href="#">
+            <img class="img-responsive ism" src="./images/block3.jpg" />
+            <div class="diamond-mask">
+              <h4>華滋館优势</h4>
+              <p>系出名門 · 醬酒發源地</p>
+            </div>
+          </a>
+        </div>
+        <div class=" col-sm-6 col-md-6 item">
+          <a href="#">
+            <img class="img-responsive ism" src="./images/block4.jpg" />
+            <div class="diamond-mask">
+              <h4>華滋館优势</h4>
+              <p>系出名門 · 醬酒發源地</p>
+            </div>
+          </a>
         </div>
       </div>
     </div>
 
     <!--系列产品-->
     <div class="production-list">
-      <div class="container-fluid zs">
+      <div class="container-base">
+        <div class="left">
+          <img class="img-responsive" src="./images/left-ad.jpg" />
+        </div>
+        <div class="right"></div>
         <!-- <div class="pro-tisl visible-xs-block">
             <h4>HUZIGUAN</h4>
             <p>系列产品</p>
         </div> -->
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-sm-3 col-md-3 production-left hidden-xs">
             <img src="./images/left-ad.jpg" />
           </div>
@@ -230,7 +243,7 @@
               <div class="slide row">slider3</div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -240,7 +253,7 @@
         <div class="row">
           <div class=" col-sm-6 col-md-6">
             <h4>NEWS</h4>
-            <h5>新闻资讯</h5>
+            <h5>新闻資訊</h5>
             <ul class="list-unstyled news-list">
               <li><a href="#">【共舞贵州茅台镇】“双国宝”華滋館酒融入一带一路</a></li>
               <li><a href="#">酱香国酒華滋館酒业 闪耀中欧论坛</a></li>
@@ -274,9 +287,9 @@
               <li><a href="#">京东旗舰店</a></li>
             </ul>
           </div>
-          <div class=" col-sm-3 col-md-3">
+          <div class="col-sm-3 col-md-3">
             <h4>CONTACT</h4>
-            <h5>联系我们</h5>
+            <h5>聯系我们</h5>
             <ul class="list-unstyled contact-list">
               <li><a href="#">贵州省仁怀市華滋館酒业有限公司</a></li>
               <li><a href="#">贵州省遵义市仁怀市中枢街道青杠园社区</a></li>
@@ -290,7 +303,7 @@
       </div>
     </div>
 
-     <!--底部-->
+     <!--底部  foot.html-->
     <div class="footer">
       <div class="container-base">
         <div class="footer-logo">
@@ -299,14 +312,11 @@
         <div class="footer-info">
           <div class="row">
             <div class="col-xs-12 col-sm-3 col-md-3">
-              <a class="share-a" href="#">
-                <img src="./images/xinlang.png" alt="" srcset="">
+              <a class="share-a" style="background-image: url('./images/jd.png')" href="#">
               </a>
-              <a class="share-a"  href="#">
-                <img src="./images/xinlang.png" alt="" srcset="">
+              <a class="share-a" style="background-image: url('./images/jd.png')" href="#">
               </a>
-              <a class="share-a" href="#">
-                <img src="./images/xinlang.png" alt="" srcset="">
+              <a class="share-a" style="background-image: url('./images/jd.png')" href="#">
               </a>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
@@ -332,29 +342,33 @@
         </div>
       </div>
     </div>
-    <!-- 首屏视频 -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="vlistcont">
-            <img class="zahimg" src="javascript:www.hisense.cn/assets/images/zahmw.gif" alt="">
-            <div class="vlistpage">
-              <video id="my-video" class="video-js vjs-big-play-centered" controls  width="100%" height="100%" style="width:100%; height:100%;" poster="/image/idx-bg-01.7589b895.jpg">
-                <source src="https://www.zhangxinxu.com/study/media/cat.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="vli-close poi" data-dismiss="modal">
-          </div>
+    <!-- 右边客服以及置顶 -->
+    <ul class="float-nav">
+      <li class="li">
+        <i class="iconfont icon-xiaoxi"></i>
+        <div class="wtip">
+          <a class="wbtn" href="http://">在线客服</a>
+          <a class="wbtn" href="http://">招商加盟</a>
         </div>
-      </div>
-    </div>    
+      </li>
+      <li class="li">
+        <i class="iconfont icon-erweima"></i>
+        <div class="wtip">
+          <img class="img-responsive" src="./images/codes.png" alt="" srcset="">
+        </div>
+      </li>
+      <li class="li last">
+        <i class="iconfont icon-arrowup"></i>
+        <span>返回顶部</span>
+      </li>
+    </ul>
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="./js/lib/jquery.min.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-    <script src="./js/lib/video.js"></script>
+    <script src="./js/lib/video.min.js"></script>
     <script src="./js/lib/bootstrap.min.js"></script>
     <script src="./js/lib/swiper.min.js"></script>
+    <script src="./js/common.js"></script>     
     <script src="./js/index.js"></script>     
   </body>
 </html>

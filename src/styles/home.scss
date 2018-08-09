@@ -1,0 +1,232 @@
+.page-home{
+  .in-video{
+    position: relative;
+    margin-top: -80px;
+    width: 100%;
+    height: 500px;
+    background-color: #f2f2f2;
+    overflow: hidden;
+  }
+  .vidoelist {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .video-mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0, 0, 0, .5);
+  }
+  .palybut {
+    display: block;
+    height: 120px;
+    width: 120px;
+    text-decoration: none;
+    top: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+    left: 50%;
+    position: absolute;
+    background: url(../images/icon/play.png) no-repeat center;
+    background-size: contain;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: #fcc800;
+  }
+  /* 广告板块 */
+  .content-section {
+    width: 100%;
+    margin: 20px 0;
+    @media (max-width: 768px) {
+    }
+  }
+  .diamond{
+    padding:  0 10px;
+    margin-bottom: 0;
+    .row{
+      margin: 0;
+    }
+    @media (max-width: 768px) {
+      padding:  0;
+      
+    }
+    .ism{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .item{
+      padding: 0 10px;
+      @media (max-width: 768px) {
+        padding:  0;
+      }
+      &:hover{
+        .diamond-mask{
+          opacity: 1;
+          h4{
+           transform: translateY(0);
+          }
+          p{
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+    .diamond-mask{
+      position: absolute;
+      top: 0;
+      left: 10px;
+      right: 10px;
+      bottom: 20px;
+      transition: all .3s;
+      opacity: 0;
+      background: rgba(16, 65, 147, 0.8);
+      text-align: center;
+      color: #fff;
+      @media (max-width: 768px) {
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+      }
+      h4{
+        font-size: 3vw;
+        margin-top: 30%;
+        margin-bottom: 10px;
+        transition: all .3s ease .1s;
+        transform: translateY(-15px);
+        @media (max-width: 768px) {
+          font-size: 36px;
+        }
+      }
+      p{
+        transition: all .3s ease .1s;
+        font-size: 1vw;
+        transform: translateY(15px);
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+
+    }
+  }
+  /*系列产品*/
+  .production-list{
+    height: auto;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    .left{
+      float: left;
+      width: 398px;
+    }
+    .right{
+      margin-left: 398px;
+    }
+  }
+  /* 底部导航 */
+  .footer-nav {
+    margin-top: 5%;
+    margin-bottom: 2%;
+    h4 {
+      color: #fcc800;
+      font-size: 30px;
+      letter-spacing: 26px;
+      font-family: "FangSong";
+      margin-bottom: 0px;
+      overflow: hidden;
+    }
+    h5 {
+      margin-top: 10px;
+      letter-spacing: 3px;
+      margin-bottom: 50px;
+      font-size: 32px;
+      overflow: hidden;
+    }
+    ul {
+      position: relative;
+      font-size: 0;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -10px;
+        width: 1px;
+        height:100%;
+        background: #c2c2c2;
+        z-index: 9;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: -25px;
+        left: -3px;
+        width: 20px;
+        height: 4px;
+        background: #f51650;
+        z-index: 9;
+      }
+      &.brand-list:after {
+        background: #a170dc;
+      }
+      &.contact-list:after {
+        background: #00d9cc;
+      }
+      li {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        a{
+          text-decoration: none;
+          font-size: 14px;
+          line-height: 2;
+          color: #9b9b9b;
+        }
+      }
+      a:hover {
+        color: #5f5f5f;
+      }
+    }
+    .news-list li {
+      width: 49%;
+      padding-right: 30px; 
+      display: inline-block; 
+    }
+    .brand-list li {
+      width:  49%;
+      display: inline-block;
+    }
+    @media (max-width: 768px) {
+      padding-bottom: 100px;
+      .row{
+        margin: 0;
+      }
+        .container-base{
+          padding: 0 15px;
+        }
+        h5{
+          text-align: center;
+          font-size: 28px;
+        }
+        h4{
+          text-align: center;
+          margin-top: 50px;
+          font-size: 28px;
+          text-indent: 1em;
+        }
+        ul{
+          padding-left: 30px;
+        }
+        ul:after{
+          left: 0px;
+        }
+        ul:before{
+          left: 17px;
+        }
+      }
+  }
+}
+

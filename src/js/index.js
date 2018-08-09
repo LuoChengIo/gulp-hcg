@@ -1,18 +1,44 @@
 (function () {
   
   // 首页
-  $(".an-video").height(($(window).height()-80));
-  $(".head-search").on("click", function () {
-    $(".head-wrapper").addClass("head-search-show");
+  // 视频高度处理
+  var resizeVideo = function(playobj) {
+    var winWidth = $(window).width();
+    var winHeight = $(window).height();
+    $(".in-video").height(winHeight);
+    if(winWidth/winHeight > 16/9) { //判断视窗比例
+      playobj.width(winWidth);
+      playobj.height(winWidth*9/16);
+    }else {
+      playobj.width(winHeight*16/9);
+      playobj.height(winHeight);
+    }
+  }
+  var myPlayer = videojs('player-Abbreviated');
+  resizeVideo(myPlayer)
+  videojs("player-Abbreviated").ready(function(){
+    var myPlayer = this;
+    myPlayer.play();
   });
-  $('.head-search-close').on("click", function () {
-    console.log('----')
-    $(".head-wrapper").removeClass("head-search-show");
+  $(window).resize(function(){ //窗口变化改变video
+    debouce(resizeVideo(myPlayer),300)
+  });
+  $('.palybut').on('click',function(){ // 点击播放按钮隐藏灰层，开启声音
+    $('.video-mask').hide();
+    myPlayer.muted(false);
+  })
+  $(window).scroll( function() {  // 滚动监听
+    debouce((function(){ // 当video不在可视区域内，暂停播放
+      var winHeight = $(window).height();
+      var skt = -(document.getElementById('player-Abbreviated').getBoundingClientRect().top);
+      if(skt > winHeight) {
+        $('.video-mask').show();
+        myPlayer.muted(true);
+      }
+    })(),300)
   });
 
-  // $(".an-head-search").on("mouseleave", function () {
-  //   $(this).find("input").stop().hide(300);
-  // });
+  // 轮播处理
   var swiper = new Swiper('.grandmaster', {
     autoplay: true,//可选选项，自动滑动
     pagination: {
@@ -33,17 +59,4 @@
     $(this).addClass('active').siblings().removeClass("active");
     $(".pt-container>div").eq(index).addClass("active").siblings().removeClass("active");
    })
-  //  视频初始化
-  var videoObj = videojs("my-video");
-  $('#myModal').on('show.bs.modal', function(){ // 模态框居住处理
-    var $this = $(this);
-    var $modal_dialog = $this.find('.modal-dialog');
-    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
-    $this.css('display', 'block');
-    $modal_dialog.css({'margin-top': Math.max(0, ($(window).height() - $modal_dialog.height()) / 2) });
-  });
-  $('#myModal').on('hide.bs.modal', function(){ // 模态框关闭视频暂停
-    videoObj.pause();
-  });
-  
 })()

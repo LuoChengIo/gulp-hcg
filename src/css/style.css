@@ -1,25 +1,17 @@
 /* Testing autoprefixer */
-
 .autoprefixertest {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  color: red;
-}
+  color: red; }
 
 /* Testing cssnext */
-
 .cssnext {
-  background:red
-}
-
-.cssnext .test {
-  color: red;
-}
+  background: red; }
+  .cssnext .test {
+    color: red; }
 
 /* Testing precss */
-
 .precss {
-    background: green
-}
+  background: green; }
