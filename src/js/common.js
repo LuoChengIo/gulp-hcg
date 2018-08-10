@@ -50,16 +50,18 @@ Math.easeout = function (A, B, rate, callback) {
 };
 /**一些公共处理 */
 $(function(){
+    var doc = document.body.scrollTop? document.body : document.documentElement,
+        winHeight= $(window).height(),
+        winWidth = $(window).width();
     // 浮动客服以及置顶处理
     var topDom = $('.float-nav .last'),
-        doc = document.body.scrollTop? document.body : document.documentElement,
         floatNav = $('.float-nav');
     if(floatNav.length){ //判断右浮动是否存在
         $(window).scroll( function() {  // 滚动监听
             debouce((function(){ // 当video不在可视区域内，暂停播放
                 if(doc.scrollTop > 100) {
                     floatNav.show()
-                    if(doc.scrollTop > 1080) {
+                    if(doc.scrollTop > winHeight) {
                         topDom.show()
                     }else {
                         topDom.hide()
@@ -74,6 +76,39 @@ $(function(){
                 doc.scrollTop = value;
             });
         })
+    }
+    //公共导航处理
+    var dropw = $('.bg-drop-menu'),
+        form  = $('#s_p_form'),
+        wform  = $('#s_w_form'),
+        annav  = $('.custom-navbar .an-nav');
+    if(dropw.length) {
+        dropw.width(winWidth);
+        dropw.css('left',-($('.inlineShop').offset().left-6));
+        $('.an-nav .last').on('click',function(){
+            form.show();
+            setTimeout(() => {
+                form.addClass('active');
+            }, 200);
+            // form.animate({ 
+            //     width: "640px",
+            // }, 1000 );
+            annav.hide();
+        });
+        $('#s_p_form .close-b').on('click',function(){
+            form.removeClass('active');
+            setTimeout(() => {
+                form.hide();
+                annav.show();
+            }, 300);
+        })
+        $('.navbar-search').on('click',function(){
+            wform.show();
+        });
+        $('#s_w_form .close-b').on('click',function(){
+            wform.hide();
+        })
+        
     }
     
 })
