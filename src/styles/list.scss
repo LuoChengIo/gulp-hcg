@@ -1,0 +1,152 @@
+.page-list{
+  .list-top{
+    margin-top: 65px;
+    padding: 15px 0;
+    border-bottom:  1px solid #f2f2f2;
+    h4{
+      font-size: 34px;
+      color: #fcc800;
+      letter-spacing: .8em;
+      font-weight: normal;
+    }
+    p{
+      margin-top: 10px;
+      font-size: 28px;
+      line-height: 1.2;
+      color: #585858;
+    }
+  }
+  .top-tabs{
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    padding-right: 6.77%;
+    li{
+      display: inline-block; 
+      margin:  0 5px;
+      font-size: 14px;
+      border-bottom: 2px solid transparent;
+      transition: all .3s;
+      a{
+        display: inline-block;
+        padding: 10px;
+        color: #c2c2c2;
+      }
+      &.active{
+        border-color: #fcc800;
+      }
+      &:hover{
+        border-color: #fcc800;
+        
+      }
+    }
+  }
+  .wap-pro-list{
+    .w-title{
+      padding: 60px 0 30px 0;
+      text-align: center;
+      h4{
+        font-size: 24px;
+        letter-spacing: .8em;
+        color: #fcc800;
+        text-indent: .8em;
+        margin-bottom: 8px;
+      }
+      p{
+        font-size: 25px;
+      }
+    }
+    .w-item{
+      p{
+        margin: 14px 0 30px;
+        font-size: 16px;
+        color: #fcc800;
+      }
+    }
+    .btn-warp{
+      padding: 50px 20px;
+      border-bottom: 5px solid #f2f2f2;
+      .more-btn{
+        display: block;
+        background-color:#fcc800;
+        border-radius: 90px; 
+        font-size: 16px;
+        line-height: 40px;
+        height: 40px;
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
+  .empty{
+    font-size: 20px;
+    color: #666;
+    padding: 10% 0 167px 0;
+    text-align: center;
+  }
+  .list-content{
+    padding-top: 55px;
+    padding-bottom: 150px;
+    .s-img{
+      margin-bottom: 30px;
+      @media (max-width: 768px){
+        margin-bottom: 18px;
+      }
+    }
+    a:hover{
+      .product-hover{
+        opacity: 1;
+        h4,p,button{
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+    h5{
+      font-size: 18px;
+      color: #fcc800;
+      margin-bottom: 20px;
+    }
+    .product-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .5);
+      text-align: center;
+      padding-top: 40%;
+      opacity: 0;
+      transition: all .3s;
+      h4 {
+        font-size: 20px;
+        color: #ffffff;
+        margin: 2px auto;
+        opacity: 0;
+        transition: all .3s ease .1s;
+        transform: translateY(-20px);
+      }
+      p {
+        transform: translateY(-20px);
+        font-size: 12px;
+        color: #ffffff;
+        opacity: 0;
+        transition: all .3s ease .1s;
+        margin-bottom: 18px;
+      }
+      button {
+        background: #fcc800;
+        border: 0;
+        color: #ffffff;
+        padding: 2px 5px;
+        width: 44px;
+        height: 44px;
+        font-size: 24px;
+        border-radius: 3px;
+        opacity: 0;
+        transition: all .3s ease .1s;
+        transform: translateY(20px);
+      }
+    }
+  }
+}

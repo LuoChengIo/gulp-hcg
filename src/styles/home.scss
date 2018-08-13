@@ -313,6 +313,9 @@
     ul {
       position: relative;
       font-size: 0;
+      @media (min-width: 768px) {
+        min-height: 170px;
+      }
       &:before {
         content: '';
         position: absolute;
