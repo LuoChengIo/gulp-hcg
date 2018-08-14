@@ -838,6 +838,19 @@ a[href^="http"]:empty::before {
 /*=============================================
 =            重置bootstarp部分样式            =
 =============================================*/
+.breadcrumb{
+    background-color: transparent;
+    color: #666;
+    padding: 15px 0;
+    a{
+        color: #666;
+    }
+    &>li + li:before{
+        color: #666;
+        content: ">";
+    }
+}
+
 
 /*=====  End of 重置bootstarp部分样式  ======*/
 
