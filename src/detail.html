@@ -131,9 +131,10 @@
       </div><!-- /.container-fluid -->
     </nav>
     <!-- 头部导航end -->
-
+    <!-- 购买导航 -->
+    <!-- 购买导航end -->
     <!--面包屑-->
-    <div class="container-base hidden-xs">
+    <div class="container-base hidden-xs mt10">
       <ol class="breadcrumb">
         <li><a href="#">首页</a></li>
         <li><a href="#">产品中心</a></li>
@@ -142,29 +143,41 @@
     </div>
 
     <!--产品详情-->
-    <div class="product-detail">
-      <!-- <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 pro-de-left">
-            <h1>华滋馆 · 十斤坛装鉴藏大师</h1>
-            <h4>Hua Zi Museum, ten jin altar master</h4>
-            <div class="product-size">
-              <p>规格：（5000ml×1）×1盒</p>
-              <p>酒精度：53%vol</p>
-            </div>
-            <div class="product-des">
-              <h4>盛世九州 · 和贵天下</h4>
-              <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为，性恪守古法、亲力亲为古法古法保证三行的内容就可古法。</p>
-            </div>
-            <div class="product-buy">
-              <a href="#" target="_blank">立即购买</a>
-            </div>
+    <div class="product-detail rel">
+      <div class="pro-de-right">
+        <img class="img-responsive" src="./images/detail.png" />
+      </div>
+      <div class="pro-de-left">
+          <h1 class="mb5">华滋馆 · 十斤坛装鉴藏大师</h1>
+          <h2>Hua Zi Museum, ten jin altar master</h2>
+          <div class="product-size">
+            <p>规格：（5000ml×1）×1盒</p>
+            <p>酒精度：53%vol</p>
           </div>
-          <div class="col-xs-12 col-sm-6 pro-de-right">
-            <img src="src/images/detail.jpg" />
+          <div class="product-des">
+            <h4 class="mb5">盛世九州 · 和贵天下</h4>
+            <p>大师甄选，优质基酒由国家级酿酒大师、国家级非物质文化遗产“酱酒传统酿造技艺”代表，性恪守古法、亲力亲为，性恪守古法、亲力亲为古法古法保证三行的内容就可古法。</p>
           </div>
-        </div>
-      </div> -->
+          <div >
+            <a href="#" class="product-buy" target="_blank">立即购买</a>
+          </div>
+          <div class="share-d hidden-xs">
+            <span class="ls">分享</span>
+            <a class="ls " href="javascript：">
+              <i class="iconfont icon-tubiao214"></i>
+            </a>
+            <a class="ls " href="javascript：">
+              <i class="iconfont icon-weixin"></i>
+            </a>
+            <a class="ls " href="javascript：">
+              <i class="iconfont icon-qqkongjian"></i>
+            </a>
+            <span class="ls ">
+              ...
+            </span>
+          </div>
+
+      </div>
     </div>
 
     <!--块1-->
@@ -209,21 +222,60 @@
       <p class="pg-lt vm dib ovh">上一篇：<a href="#">华滋馆 · 十九大纪念酒</a></p>
       <div class="pg-ct vm dib">
         <div class="dib one">
-            <span class="glyphicon glyphicon-remove"></span>
+            <span class="iconfont icon-quxiao f30 vm"></span>
         </div>
         <div class="dib two">
-            <span class="glyphicon glyphicon-triangle-left mr20 vm"></span>
-            <span class="vm">返回列表</span>
-            <span class="glyphicon glyphicon-triangle-right ml20 vm"></span>
+            <!-- 与上一篇链接保持一致 -->
+            <a class="vm" href="#"><span class="glyphicon glyphicon-triangle-left mr20"></span></a>
+            <!-- 列表页面的链接 -->
+            <a class="vm" href="#"><span class="vm">返回列表</span></a>
+            <!-- 与下一篇链接保持一致 -->
+            <a class="vm" href="#"><span class="glyphicon glyphicon-triangle-right ml20"></span></a>
         </div>
       </div>
       <p class="pg-rt vm dib ovh">下一篇：<a href="#">华滋馆 · 秘酿叁拾年</a></p>
     </div>
 
     <!--相关商品-->
-    <div class="relevant-pro">
-      <h4>相关商品</h4>
-      <ul></ul>
+    <div class="relevant-pro container-base">
+      <h5>相关商品</h5>
+      <div class="container-fluid">
+        <ul class="row shop-list">
+          <li class="col-sm-4 col-md-4 ">
+            <a href="#" class="db rel" target="_blank">
+              <img class="s-img img-responsive" src="./images/product3.png" />
+              <div class="product-hover">
+                <h4 class="ell">华滋馆 · 十斤坛装鉴藏大师</h4>
+                <p class="ell">Hua Zi Museum, ten jin altar master</p>
+                <button><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+              <h5 class="tc visible-xs-block ell">华滋馆 · 十斤坛装鉴藏大师</h5>
+            </a>
+          </li>
+          <li class="col-sm-4 col-md-4 ">
+            <a href="#" class="db rel" target="_blank">
+              <img class="s-img img-responsive" src="./images/product3.png" />
+              <div class="product-hover">
+                <h4 class="ell">华滋馆 · 十斤坛装鉴藏大师</h4>
+                <p class="ell">Hua Zi Museum, ten jin altar master</p>
+                <button><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+              <h5 class="tc visible-xs-block ell">华滋馆 · 十斤坛装鉴藏大师</h5>
+            </a>
+          </li>
+          <li class="col-sm-4 col-md-4 ">
+            <a href="#" class="db rel" target="_blank">
+              <img class="s-img img-responsive" src="./images/product3.png" />
+              <div class="product-hover">
+                <h4 class="ell">华滋馆 · 十斤坛装鉴藏大师</h4>
+                <p class="ell">Hua Zi Museum, ten jin altar master</p>
+                <button><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+              <h5 class="tc visible-xs-block ell">华滋馆 · 十斤坛装鉴藏大师</h5>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <!--底部 替换成_footer.html-->
     <div class="footer">

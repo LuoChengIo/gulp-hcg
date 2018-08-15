@@ -1,3 +1,9 @@
+/*=============================================
+=            字体图标            =
+=============================================*/
+
+@import '../fonts/iconfont.scss';
+/*=====  End of 字体图标  ======*/
 
 /* reset */
 
@@ -112,9 +118,13 @@ ins,
 a {
     text-decoration: none;
 }
-a:hover,a:active,a:focus{
+
+a:hover,
+a:active,
+a:focus {
     text-decoration: none;
 }
+
 /* ---------------------single CSS----------------------- */
 
 /* display */
@@ -828,29 +838,22 @@ a[href^="http"]:empty::before {
 }
 
 /*=============================================
-=            字体图标            =
-=============================================*/
-@import '../fonts/iconfont.scss';
-
-/*=====  End of 字体图标  ======*/
-
-
-/*=============================================
 =            重置bootstarp部分样式            =
 =============================================*/
-.breadcrumb{
+
+.breadcrumb {
     background-color: transparent;
     color: #666;
     padding: 15px 0;
-    a{
+    margin-bottom: 0;
+    a {
         color: #666;
     }
-    &>li + li:before{
+    &>li+li:before {
         color: #666;
         content: ">";
     }
 }
-
 
 /*=====  End of 重置bootstarp部分样式  ======*/
 
@@ -946,7 +949,7 @@ a[href^="http"]:empty::before {
         background: #fff;
         color: #fcc800;
     }
-    .navbar-nav.an-nav li a.active{
+    .navbar-nav.an-nav li a.active {
         background: #fcc800;
         color: #fff;
     }
@@ -990,7 +993,7 @@ a[href^="http"]:empty::before {
     .navbar-toggle {
         border-color: transparent;
     }
-    @media (min-width: 768px){
+    @media (min-width: 768px) {
         .navbar-right {
             padding: 6px 0;
         }
@@ -1000,7 +1003,7 @@ a[href^="http"]:empty::before {
         }
         .navbar-right .mydrop {
             top: 60px;
-            min-width:210px;
+            min-width: 210px;
             right: auto;
             padding: 0;
             left: 50%;
@@ -1008,13 +1011,13 @@ a[href^="http"]:empty::before {
             border-radius: 0;
             border-top: 4px solid #bebebe;
             transform: translateX(-50%);
-            .divider{
+            .divider {
                 margin: 0
             }
-            li{
-                a{
+            li {
+                a {
                     position: relative;
-                    &:after{
+                    &:after {
                         font-family: 'Glyphicons Halflings';
                         content: "\e258";
                         position: absolute;
@@ -1026,18 +1029,18 @@ a[href^="http"]:empty::before {
                     line-height: 40px;
                     color: #777;
                     transition: all .3s;
-                    &:hover{
+                    &:hover {
                         color: #333;
                         text-indent: 1em;
                         background-color: #ededed;
-                        &:after{
+                        &:after {
                             opacity: 1;
                         }
                     }
                 }
             }
         }
-        .bg-drop-menu{
+        .bg-drop-menu {
             position: absolute;
             top: 59px;
             height: 150px;
@@ -1046,11 +1049,11 @@ a[href^="http"]:empty::before {
             transition: all .3s;
         }
         .open {
-            .bg-drop-menu{
+            .bg-drop-menu {
                 display: block;
             }
         }
-        .navbar-right .myshop{
+        .navbar-right .myshop {
             top: 59px;
             height: 150px;
             left: 50%;
@@ -1065,29 +1068,29 @@ a[href^="http"]:empty::before {
             background-color: transparent;
             transition: all .3s ease 10s;
             overflow: hidden;
-            li{
+            li {
                 display: inline-block;
                 min-width: 50px;
                 height: 70px;
-                &+li{
+                &+li {
                     border-left: 1px solid #e8e8e8;
                 }
-                a{
+                a {
                     transition: all .3s;
                     opacity: .6;
-                    &:hover{
+                    &:hover {
                         opacity: 1;
                         background-color: transparent;
                     }
                 }
-                img{
+                img {
                     width: auto;
                     height: 100%;
                 }
             }
         }
     }
-    .fm{
+    .fm {
         line-height: 38px;
         margin: 5px auto;
         width: 710px;
@@ -1096,13 +1099,12 @@ a[href^="http"]:empty::before {
         transform: translateX(-20px);
         overflow: hidden;
         transition: all .2s;
-        & .sercj-ct{
-        }
-        &.active{
+        & .sercj-ct {}
+        &.active {
             opacity: 1;
             transform: translateX(0);
         }
-        .s_ipt{
+        .s_ipt {
             width: 100%;
             height: 22px;
             font-size: 14px;
@@ -1126,7 +1128,7 @@ a[href^="http"]:empty::before {
             margin-right: 0;
             border-right-width: 0;
         }
-        .s_btn_wr{
+        .s_btn_wr {
             display: inline-block;
             z-index: 0;
             vertical-align: top;
@@ -1145,14 +1147,14 @@ a[href^="http"]:empty::before {
             -webkit-appearance: none;
             -webkit-border-radius: 0;
         }
-        .close-b{
-            display:inline-block;
+        .close-b {
+            display: inline-block;
             height: 40px;
             width: 40px;
             line-height: 40px;
             text-align: center;
             color: #999;
-            &:hover{
+            &:hover {
                 color: #666;
             }
         }
@@ -1160,14 +1162,14 @@ a[href^="http"]:empty::before {
     .fc {
         position: absolute;
         top: 15px;
-        padding: 10px 65px 5px 5px ;
+        padding: 10px 65px 5px 5px;
         height: 51px;
         background-color: #fff;
-        .form-control:focus{
+        .form-control:focus {
             border-color: #ccc;
             box-shadow: none;
         }
-        .close-b{
+        .close-b {
             display: inline-block;
             position: absolute;
             top: 10px;
@@ -1201,7 +1203,7 @@ a[href^="http"]:empty::before {
         }
     }
     .navbar-default .navbar-nav .open .dropdown-menu>li>a {
-        img{
+        img {
             height: 30px;
         }
     }
@@ -1212,22 +1214,20 @@ a[href^="http"]:empty::before {
 .footer {
     .share-a {
         display: inline-block;
-        margin-right: 15px;
-        // background-position: -42px 0px;
+        margin-right: 15px; // background-position: -42px 0px;
         width: 37px;
         height: 37px;
         line-height: 37px;
-        text-align: center;
-        // background-color: #929292;
+        text-align: center; // background-color: #929292;
         // border:1px solid #999;
         transition: all .2s ease-in-out;
         border-radius: 999px;
         opacity: .7;
-        img{
+        img {
             display: inline-block;
             width: 100%;
         }
-        &:hover{
+        &:hover {
             // background-position: 0 0px;
             // background-color: #e1251a;
             opacity: 1;
@@ -1294,13 +1294,14 @@ a[href^="http"]:empty::before {
  * 浮动客服导航
  *
  */
-.float-nav{
+
+.float-nav {
     position: fixed;
     z-index: 100;
     bottom: 20%;
     right: 10px;
     display: none;
-    .li{
+    .li {
         position: relative;
         width: 48px;
         height: 48px;
@@ -1310,28 +1311,28 @@ a[href^="http"]:empty::before {
         color: #929292;
         text-align: center;
         line-height: 48px;
-        i{
+        i {
             font-size: 24px;
         }
-        &:hover{
+        &:hover {
             color: #fff;
             background-color: #fcc800;
-            .wtip{
+            .wtip {
                 right: 60px;
                 opacity: 1;
                 transform: translateY(-50%);
             }
         }
-        &.last{
+        &.last {
             display: none;
-            span{
+            span {
                 display: none;
             }
-            &:hover{
-                i{
+            &:hover {
+                i {
                     display: none;
                 }
-                span{
+                span {
                     display: block;
                     font-size: 12px;
                     line-height: 1.3;
@@ -1339,8 +1340,7 @@ a[href^="http"]:empty::before {
                 }
             }
         }
-        
-        .wtip{
+        .wtip {
             position: absolute;
             top: 50%;
             right: 11160px;
@@ -1349,10 +1349,10 @@ a[href^="http"]:empty::before {
             background-color: #f5f5f5;
             border-radius: 5px;
             border: 1px solid #ddd;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             opacity: 0;
-            transition:right .1s ease, opacity .3s ease .1s ,transform .3s ease .1s;
-            &:before{
+            transition: right .1s ease, opacity .3s ease .1s, transform .3s ease .1s;
+            &:before {
                 content: '';
                 position: absolute;
                 top: 0;
@@ -1360,7 +1360,7 @@ a[href^="http"]:empty::before {
                 width: 14px;
                 height: 100%;
             }
-            &:after{
+            &:after {
                 content: '';
                 position: absolute;
                 top: 50%;
@@ -1374,7 +1374,7 @@ a[href^="http"]:empty::before {
                 border-bottom-color: transparent;
                 transform: rotate(45deg) translateY(-50%);
             }
-            .wbtn{
+            .wbtn {
                 display: block;
                 height: 36px;
                 line-height: 36px;
@@ -1384,13 +1384,80 @@ a[href^="http"]:empty::before {
                 opacity: .8;
                 color: #fff;
                 background-color: #fcc800;
-                &:hover{
+                &:hover {
                     opacity: 1;
                 }
-                & + .wbtn {
+                &+.wbtn {
                     margin-top: 15px;
                 }
             }
+        }
+    }
+}
+
+.shop-list {
+    .s-img {
+        width: 100%;
+        margin-bottom: 30px;
+        @media (max-width: 768px) {
+            margin-bottom: 18px;
+        }
+    }
+    a:hover {
+        .product-hover {
+            opacity: 1;
+            h4,
+            p,
+            button {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+    h5 {
+        font-size: 18px;
+        color: #fcc800;
+        margin-bottom: 20px;
+    }
+    .product-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .5);
+        text-align: center;
+        padding-top: 40%;
+        opacity: 0;
+        transition: all .3s;
+        h4 {
+            font-size: 20px;
+            color: #ffffff;
+            margin: 2px auto;
+            opacity: 0;
+            transition: all .3s ease .1s;
+            transform: translateY(-20px);
+        }
+        p {
+            transform: translateY(-20px);
+            font-size: 12px;
+            color: #ffffff;
+            opacity: 0;
+            transition: all .3s ease .1s;
+            margin-bottom: 18px;
+        }
+        button {
+            background: #fcc800;
+            border: 0;
+            color: #ffffff;
+            padding: 2px 5px;
+            width: 44px;
+            height: 44px;
+            font-size: 24px;
+            border-radius: 3px;
+            opacity: 0;
+            transition: all .3s ease .1s;
+            transform: translateY(20px);
         }
     }
 }
