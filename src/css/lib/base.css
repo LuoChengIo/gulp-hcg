@@ -814,7 +814,7 @@ a[href^="http"]:empty::before {
       padding-top: 9px;
       padding-bottom: 9px; }
     .custom-navbar .navbar-right .mydrop {
-      top: 60px;
+      top: 59px;
       min-width: 210px;
       right: auto;
       padding: 0;
@@ -861,6 +861,36 @@ a[href^="http"]:empty::before {
       transition: all .3s; }
     .custom-navbar .open .bg-drop-menu {
       display: block; }
+    .custom-navbar .dropdown-menu::before {
+      position: absolute;
+      content: '';
+      top: -25px;
+      width: 100%;
+      height: 23px; }
+    .custom-navbar .dropdown:hover .dropdown-menu {
+      opacity: 0;
+      display: block;
+      -webkit-animation: dropdown .3s 1 forwards;
+      animation: dropdown .3s 1 forwards; }
+    .custom-navbar .dropdown:hover .bg-drop-menu {
+      opacity: 0;
+      display: block;
+      -webkit-animation: dropdown .3s 1 forwards;
+      animation: dropdown .3s 1 forwards; }
+    @-webkit-keyframes dropdown {
+      from {
+        opacity: 0;
+        top: 65px; }
+      to {
+        opacity: 1;
+        top: 59px; } }
+    @keyframes dropdown {
+      from {
+        opacity: 0;
+        top: 65px; }
+      to {
+        opacity: 1;
+        top: 59px; } }
     .custom-navbar .navbar-right .myshop {
       top: 59px;
       height: 150px;

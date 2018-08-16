@@ -193,4 +193,50 @@
             }
         }
     }
+    .detail-navbar{
+        border: 0;
+        background-color: #fff;
+        border-radius: 0;
+        margin-bottom: 0;
+        padding: 5px 0;
+        display: none;
+        .navbar-brand{
+            font-size: 24px;
+            color: #333;
+        }
+        .navbar-right{
+            li + li{
+                margin-left: 5px;
+            }
+        }
+        .pay-btn{
+            display: inline-block;
+            padding: .5em 2em;
+            border-radius: 899px;
+            background-color: #fcc800;
+            color: #fff;
+            margin-top: 8px;
+            @media (max-width: 768px) {
+                text-align: center;
+                padding: .7em 2em;
+                display: block;
+                margin: 0 10px;
+            }
+            &:hover,&:focus{
+                color: #fff;
+                background-color: #fcc800;
+            }
+        }
+    }
+    .affix {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 10000;
+        display: block;
+        @media (max-width: 768px) {
+            top: auto;
+            bottom: 0;
+        }
+    }
 }

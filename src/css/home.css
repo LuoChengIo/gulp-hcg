@@ -160,12 +160,14 @@
         padding-top: 20px;
         padding-right: 6.77%; }
         .page-home .production-list .right .in-list .swiper-container {
+          width: 93.23%;
           max-width: 1150px;
           margin: 0; }
         .page-home .production-list .right .in-list .g-wt {
           max-width: 1150px; }
         .page-home .production-list .right .in-list .in-item {
           position: absolute;
+          width: 100%;
           top: 20px;
           left: 0;
           color: #929292;

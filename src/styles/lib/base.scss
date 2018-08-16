@@ -1002,7 +1002,7 @@ a[href^="http"]:empty::before {
             padding-bottom: 9px;
         }
         .navbar-right .mydrop {
-            top: 60px;
+            top: 59px;
             min-width: 210px;
             right: auto;
             padding: 0;
@@ -1052,6 +1052,37 @@ a[href^="http"]:empty::before {
             .bg-drop-menu {
                 display: block;
             }
+        }
+        .dropdown-menu::before{
+            position: absolute;
+            content: '';
+            top: -25px;
+            width: 100%;
+            height: 23px;
+        }
+        .dropdown:hover{
+            .dropdown-menu{
+                opacity: 0;
+                display: block ;
+                animation:dropdown .3s 1 forwards;
+            }
+            .bg-drop-menu{
+                opacity: 0;
+                display: block ;
+                animation:dropdown .3s 1 forwards;
+            }
+            @keyframes dropdown
+            {
+                from {
+                    opacity: 0;
+                    top:65px;
+                }
+                to {
+                    opacity: 1;
+                    top:59px;
+                }
+            }
+
         }
         .navbar-right .myshop {
             top: 59px;
