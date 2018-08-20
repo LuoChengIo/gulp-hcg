@@ -1,0 +1,31 @@
+.page-404 {
+  background-color: #f8f8f8; }
+  .page-404 .not-found {
+    padding: 7.6% 15px; }
+    @media (max-width: 768px) {
+      .page-404 .not-found {
+        padding-top: 100px; }
+        .page-404 .not-found h1 {
+          text-align: left; } }
+    .page-404 .not-found h1 {
+      font-size: 26px;
+      font-weight: normal;
+      margin-bottom: 30px; }
+  .page-404 .not-tip {
+    color: #333; }
+  .page-404 .con-404 {
+    color: #929292; }
+  .page-404 .strp-w {
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 40px; }
+  .page-404 .step a {
+    display: inline-block;
+    padding: 0 2em;
+    background-color: #d3bf96;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 32px; }
+    .page-404 .step a:hover {
+      color: #fff; }
