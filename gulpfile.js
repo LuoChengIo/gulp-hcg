@@ -12,7 +12,7 @@ gulp.task('sass', function () {
   ];
   return gulp.src('./src/styles/**/*.scss')
 		.pipe(postcss(processors))
-		.pipe(sass())
+		.pipe(sass({outputStyle: 'compressed'}))
 		// .pipe(rename({extname: ".css"}))
     .pipe(gulp.dest('./src/css'));
 });
