@@ -41,6 +41,11 @@
   // 轮播处理
   var swiper = new Swiper('.grandmaster', {
     autoplay: true,//可选选项，自动滑动
+    loop:true,
+    navigation: {
+		  nextEl: '.swiper-button-next',
+		  prevEl: '.swiper-button-prev',
+		},
     pagination: {
       el: '.swiper-pagination',
     },
