@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>登录跳转</title>
+  <style>
+    .tc{
+      width: 200px;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="tc">
+      <H4>登录信息超时</H4>
+      <p>
+        <b id="second">10</b>秒后回到登录页 <a href="javascript:goBack();">跳过</a> 
+      </p>
+  </div>
+</body>
+<script>
+  var sec = document.getElementById("second");
+    var i = 10;
+    var timer = setInterval(function(){
+      i--;
+      sec.innerHTML = i;
+      if(i==1){
+        window.top.location.href = "//www.jb51.net";
+      }
+    },1000);
+      
+  function goBack(){ 
+    window.top.location.href = "//www.jb51.net";
+  } 
+</script>
+</html>

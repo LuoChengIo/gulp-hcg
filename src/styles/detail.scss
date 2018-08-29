@@ -1,25 +1,35 @@
 .page-detail{
     .product-detail{
-        padding: 6% 0 36px 16.7%;
+        padding: 60px 0 36px 16.7%;
         background-color: #f5f5f5;
-        @media (max-width: 1300px) {
-            padding-top: 3%;
+        min-height: 930px;
+        @media (max-width: 768px) {
+            min-height: 568px;
         }
         @media (max-width: 768px) {
             padding: 50px 15px;
         }
         .pro-de-left{
+            position: absolute;
+            top: 50%;
+            left: 16.7%;
             font-size: 14px;
             color: #929292;
             width: 40%;
             max-width: 500px;
+            animation: translateLight .4s ease-out .1s ;
+            animation-fill-mode:forwards;
+            transform: translate(-100%,-50%);
             @media (max-width: 768px) {
+                position: static;
                 width: 100%;
+                margin-top: 30px;
+                animation:none;
+                opacity: 1;
+                transform: translate(0,0);
             }
             h1{
                 font-size: 34px;
-                font-weight: normal;
-                margin-top: 26%;
                 color: #323232;
                 @media (max-width: 768px) {
                     font-size: 28px;
@@ -27,7 +37,6 @@
             }
             h2{
                 font-size: 18px;
-                font-weight: normal;
                 margin-bottom: 35px;
             }
             .product-size{
@@ -36,9 +45,10 @@
             }
             .product-des{
                 margin-bottom: 60px;
+                max-height: 250px;
+                overflow: hidden;
                 h4{
                     font-size: 16px;
-                    font-weight: normal;
                 }
             }
             .product-buy{
@@ -56,47 +66,76 @@
                     background-color: #fcc800;
                 }
             }
-            .share-d{
-                margin-top: 42%;
-                color: #929292;
-                line-height: 1;
-                .ls{
-                    display: inline-block;
-                    vertical-align: middle;
-                    padding: 1px 20px;
-                    & + .ls{
-                        border-left: 1px solid #e5e5e5;
-                    } 
-                }
-                a{
-                    color: #323232;
-                    &:hover{
-                        .icon-tubiao214{
-                            color: #c3123b;
-                        }
-                        .icon-weixin{
-                            color: #2fb011;
-                        }
-                        .icon-qqkongjian{
-                            color:  #008ef6;
-                        }
+        }
+        .share-d{
+            position: absolute;
+            left: 16.7%;
+            bottom: 36px;
+            color: #929292;
+            line-height: 1;
+            margin-left: -20px;
+            .ls{
+                display: inline-block;
+                vertical-align: middle;
+                padding: 1px 20px;
+                & + .ls{
+                    border-left: 1px solid #e5e5e5;
+                } 
+            }
+            a{
+                color: #323232;
+                &:hover{
+                    .icon-tubiao214{
+                        color: #c3123b;
+                    }
+                    .icon-weixin{
+                        color: #2fb011;
+                    }
+                    .icon-qqkongjian{
+                        color:  #008ef6;
                     }
                 }
             }
         }
         .pro-de-right{
             position: absolute;
+            top: 50%;
             right: 10px;
-            bottom: 10px;
-            width: 45.57%;
-            max-width: 875px;
-            max-height: 812px;
+            max-width: 800px;
+            max-height: 800px;
+            animation: translateRight .3s ease-out .2s ;
+            animation-fill-mode:forwards;
+            transform: translate(100%,-50%);
             @media (max-width: 768px) {
                 position: static;
                 right: auto;
                 bottom: auto;
                 width: 100%;
+                animation:none;
+                transform: translate(0,0);
             }
+        }
+    }
+    @keyframes translateRight
+    {
+        from {
+            opacity: 0;
+            transform: translate(100%,-50%);
+        }
+        to {
+            opacity: 1;
+            transform: translate(0,-50%);
+        }
+    }
+    @keyframes translateLight
+    {
+        from {
+            opacity: 0;
+            transform: translate(-100%,-50%);
+        }
+        to {
+            opacity: 1;
+            transform: translate(0,-50%);
         }
     }
     .product-place{
