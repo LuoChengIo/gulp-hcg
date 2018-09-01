@@ -54,11 +54,12 @@ $(function(){
         winHeight= $(window).height(),
         winWidth = $(window).width();
     // 浮动客服以及置顶处理
-    var topDom = $('.float-nav .last'),
+    var header = $('.custom-navbar'),
+        topDom = $('.float-nav .last'),
         floatNav = $('.float-nav');
     if(floatNav.length){ //判断右浮动是否存在
         $(window).scroll( function() {  // 滚动监听
-            debouce((function(){ // 当video不在可视区域内，暂停播放
+            debouce((function(){ //
                 if(doc.scrollTop > 100) {
                     floatNav.show()
                     if(doc.scrollTop > winHeight) {
@@ -76,6 +77,19 @@ $(function(){
                 doc.scrollTop = value;
             });
         })
+    }
+    if(header.length){
+        if(!$('body[nofixedhead]').length) {
+            $(window).scroll( function() {  // 滚动监听
+                debouce((function(){ //
+                    if(doc.scrollTop > winHeight) {
+                        header.addClass('navbar-fixed-top');
+                    }else {
+                        header.removeClass('navbar-fixed-top');
+                    }
+                })(),300)
+            });
+        }
     }
     //公共导航处理
     var dropw = $('.bg-drop-menu'),

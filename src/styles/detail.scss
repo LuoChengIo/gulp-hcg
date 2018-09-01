@@ -5,9 +5,18 @@
         min-height: 930px;
         @media (max-width: 768px) {
             min-height: 568px;
-        }
-        @media (max-width: 768px) {
             padding: 50px 15px;
+        }
+        /* 中等屏幕（桌面显示器，大于等于 992px） */
+
+        @media (min-width: 992px) {
+            padding-left: 5%;
+        }
+
+        /* 大屏幕（大桌面显示器，大于等于 1200px） */
+
+        @media (min-width: 1500px) {
+            padding-left: 16.7%;
         }
         .pro-de-left{
             position: absolute;
@@ -20,6 +29,17 @@
             animation: translateLight .4s ease-out .1s ;
             animation-fill-mode:forwards;
             transform: translate(-100%,-50%);
+            /* 中等屏幕（桌面显示器，大于等于 992px） */
+
+            @media (min-width: 992px) {
+                left: 5%;
+            }
+
+            /* 大屏幕（大桌面显示器，大于等于 1200px） */
+
+            @media (min-width: 1500px) {
+                left: 16.7%;
+            }
             @media (max-width: 768px) {
                 position: static;
                 width: 100%;
@@ -238,7 +258,11 @@
         border-radius: 0;
         margin-bottom: 0;
         padding: 5px 0;
-        display: none;
+        display: block;
+        margin-top: -50px;
+        &.affix{
+            margin-top: 0;
+        }
         .navbar-brand{
             font-size: 24px;
             color: #333;
@@ -278,4 +302,24 @@
             bottom: 0;
         }
     }
+    .grandmaster{
+        .swiper-button-white{
+          line-height: 44px;
+          .iconfont{
+            font-size: 36px;
+          }
+          background-image: none;
+          color: #999;
+          opacity: 0;
+          transition: all .3s;
+        }
+        &:hover{
+          .swiper-button-white{
+            opacity: 1;
+          }
+        }
+      }
+      .swiper-pagination-bullet-active{
+        background-color: #fcc800;
+      }
 }

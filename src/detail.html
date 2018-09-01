@@ -8,7 +8,7 @@
     <title>商品详情</title>
     <!-- 公共样式 -->
 		<link href="./css/lib/bootstrap.min.css" rel="stylesheet">
-		<link href="./css/lib/base.css" rel="stylesheet" >
+    <link href="./css/lib/base.css" rel="stylesheet" >
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
     <!--[if lt IE 9]>
@@ -16,9 +16,10 @@
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- 当前页面样式 -->
+    <link href="./css/lib/swiper.min.css" rel="stylesheet">
     <link href="./css/detail.css" rel="stylesheet">
   </head>
-  <body class="page-detail">
+  <body class="page-detail" nofixedhead>
     <!-- 头部导航 替换成_header.html-->
     <nav class="navbar navbar-default custom-navbar">
       <div class="container-base">
@@ -131,21 +132,6 @@
       </div><!-- /.container-fluid -->
     </nav>
     <!-- 头部导航end -->
-    <!-- 购买导航 -->
-    <nav class="navbar navbar-default detail-navbar" >
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header hidden-xs">
-          <a class="navbar-brand" href="javascript:">华滋馆 · 十斤坛装鉴藏大师</a>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="hidden-xs"><a href="javascript:">概述</a></li>
-          <li class="hidden-xs"><a href="javascript:">参数规格</a></li>
-          <li><a href="javascript:" class="pay-btn">立即购买</a></li>
-        </ul>
-      </div>
-    </nav>
-    <!-- 购买导航end -->
     <!--面包屑-->
     <div class="container-base hidden-xs mt10">
       <ol class="breadcrumb">
@@ -191,10 +177,55 @@
         </span>
       </div>
     </div>
+    <!-- 购买导航 -->
+    <div style="height:60px;"></div>
+    <nav class="navbar navbar-default detail-navbar" >
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header hidden-xs">
+            <a class="navbar-brand" href="javascript:">华滋馆 · 十斤坛装鉴藏大师</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="hidden-xs"><a href="javascript:">概述</a></li>
+            <li class="hidden-xs"><a href="javascript:">参数规格</a></li>
+            <li><a href="javascript:" class="pay-btn">立即购买</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- 购买导航end -->
     <!--块1-->
-    <div class="content-section">
+    <!--轮播-->
+    <div class="content-section swiper swiper-container grandmaster">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="javascript:" class="db">
+                <!-- pc端显示的图片 -->
+                <img class="img-responsive center-block pct100 hidden-xs" src="./images/banner1.jpg" alt="" srcset="">
+                <!-- 移动端显示的图片 -->
+                <img class="img-responsive center-block pct100 visible-xs-block" src="./images/banner1.jpg" alt="" srcset="">
+              </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:" class="db">
+                  <!-- pc端显示的图片 -->
+                  <img class="img-responsive center-block pct100 hidden-xs" src="./images/swiper1.jpg" alt="" srcset="">
+                  <!-- 移动端显示的图片 -->
+                  <img class="img-responsive center-block pct100 visible-xs-block" src="./images/wap-swiper.png" alt="" srcset="">
+                </a>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev swiper-button-white hidden-xs">
+            <i class="iconfont icon-xiangzuojiantou"></i>
+          </div><!--左箭头-->
+          <div class="swiper-button-next swiper-button-white hidden-xs">
+            <i class="iconfont icon-youjiantou"></i>
+          </div><!--右箭头-->      
+      </div>
+    <!-- <div class="content-section">
       <img class="img-responsive center-block" src="./images/banner1.jpg" alt="" srcset="">
-    </div>
+    </div> -->
 
     <!--块2-->
     <div class="content-section clearfix">
@@ -336,6 +367,7 @@
     <script src="./js/common.js"></script>
     <!-- 底部end -->
     <!-- 当前页面js -->
+    <script src="./js/lib/swiper.min.js"></script>
     <script src="./js/detail.js"></script>
   </body>
 </html>
