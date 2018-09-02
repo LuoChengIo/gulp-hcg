@@ -167,6 +167,10 @@
         width: 50%;
         @media (max-width: 768px) {
             width: 100%;
+            & + .float-two{
+                margin-top: 15px;
+            }
+            
         }
     }
     .pages-con{
@@ -252,15 +256,21 @@
             }
         }
     }
+    .content-section{
+        @media (max-width: 768px) {
+            margin-top: 15px;
+        }
+    }
     .detail-navbar{
         border: 0;
         background-color: #fff;
         border-radius: 0;
         margin-bottom: 0;
         padding: 5px 0;
-        display: block;
-        margin-top: -60px;
+        display: none;
+        // margin-top: -60px;
         &.affix{
+            display: block;
             margin-top: 0;
         }
         .navbar-brand{
