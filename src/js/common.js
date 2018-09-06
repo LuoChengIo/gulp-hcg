@@ -60,6 +60,7 @@ $(function(){
     if(floatNav.length){ //判断右浮动是否存在
         $(window).scroll( function() {  // 滚动监听
             debouce((function(){ //
+                doc = document.body.scrollTop? document.body : document.documentElement;
                 if(doc.scrollTop > 100) {
                     floatNav.show()
                     if(doc.scrollTop > winHeight) {
@@ -82,6 +83,7 @@ $(function(){
         if(!$('body[nofixedhead]').length) {
             $(window).scroll( function() {  // 滚动监听
                 debouce((function(){ //
+                    doc = document.body.scrollTop? document.body : document.documentElement;
                     if(doc.scrollTop > winHeight) {
                         header.addClass('navbar-fixed-top');
                     }else {

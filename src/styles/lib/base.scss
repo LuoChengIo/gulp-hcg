@@ -1245,12 +1245,12 @@ a.udl-h:hover {
     .share-a {
         display: inline-block;
         margin-right: 15px;
-        background-position: -42px 0px;
+        background-position: 0 0;
         width: 37px;
         height: 37px;
         transition: all .1s ease-in-out;
         &:hover{
-            background-position: 0 0px;
+            background-position: 0 37px;
         }
     }
     .footer-logo {
@@ -1260,6 +1260,10 @@ a.udl-h:hover {
         border-top: 1px solid #f1ecec;
         padding-top: 15px;
         margin-top: 12px;
+        i{
+            font-style: normal;
+            margin: 0 3px;
+        }
     }
     .footer-info p {
         color: #929292;
