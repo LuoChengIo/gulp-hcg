@@ -227,26 +227,48 @@
         font-size: 12px;
         line-height: 1;
         .ls{
+            position: relative;
+            float: left;
             display: inline-block;
             vertical-align: middle;
+            margin: 0;
             padding: 1px 20px;
             & + .ls{
                 border-left: 1px solid #e5e5e5;
             } 
-        }
-        a{
-            color: #323232;
+            .share-ct{
+                position: absolute;
+                bottom: 15px;
+                padding: 5px 0;
+                left: -20px;
+                width: 86px;
+                border: 1px solid #f2f2f2;
+                box-shadow: 0px 0px 20px rgba(0,0,0,.1);
+                border-radius: 3px;
+                background-color: #fff;
+                display: none;
+            }
+            &:last-child:hover{
+                .share-ct{
+                    display: block;
+                }
+            }
             &:hover{
-                .icon-tubiao214{
+                background-color: transparent !important;
+                &.icon-weibo{
                     color: #c3123b;
                 }
-                .icon-weixin{
+                &.icon-wechat{
                     color: #2fb011;
                 }
-                .icon-qqkongjian{
+                &.icon-qzone{
                     color:  #008ef6;
                 }
             }
+        }
+        a{
+            color: #323232;
+            
         }
     }
     .pages-con{

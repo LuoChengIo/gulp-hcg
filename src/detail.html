@@ -16,6 +16,7 @@
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- 当前页面样式 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
     <link href="./css/lib/swiper.min.css" rel="stylesheet">
     <link href="./css/detail.css" rel="stylesheet">
   </head>
@@ -161,19 +162,18 @@
             <a href="#" class="product-buy" target="_blank">立即购买</a>
           </div>
       </div>
-      <div class="share-d hidden-xs">
+      <div class="share-d hidden-xs social-share-cs clearfix" data-initialized="true">
         <span class="ls">分享</span>
-        <a class="ls " href="javascript：">
-          <i class="iconfont icon-tubiao214"></i>
+        <a class="ls icon-weibo" href="javascript：">
         </a>
-        <a class="ls " href="javascript：">
-          <i class="iconfont icon-weixin"></i>
+        <a class="ls icon-wechat" href="javascript：">
         </a>
-        <a class="ls " href="javascript：">
-          <i class="iconfont icon-qqkongjian"></i>
+        <a class="ls icon-qzone" href="javascript：">
         </a>
-        <span class="ls ">
+        <span class="ls poi">
           ...
+          <div class="share-ct social-share-cs" data-disabled="weibo,wechat,qzone" >
+          </div>
         </span>
       </div>
     </div>
@@ -367,8 +367,21 @@
     <script src="./js/common.js"></script>
     <!-- 底部end -->
     <!-- 当前页面js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
     <script src="./js/lib/swiper.min.js"></script>
     <script src="./js/detail.js"></script>
+    <script>
+      $(function(){
+        var $config = {
+          image               : '', // 图片, 默认取网页中第一个img标签
+          title               : '234', //标题
+          description         : '123', // 描述
+          wechatQrcodeTitle   : "微信扫一扫：分享", // 微信二维码提示文字
+          wechatQrcodeHelper  : '<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>',
+        };
+        socialShare('.social-share-cs', $config);
+      })
+    </script>
   </body>
 </html>
 
