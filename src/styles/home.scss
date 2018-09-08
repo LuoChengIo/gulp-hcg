@@ -40,6 +40,7 @@
       color: #666;
     }
   }
+  
   .grandmaster{
     .swiper-button-white{
       line-height: 44px;
@@ -66,6 +67,11 @@
     margin: 20px 0;
     @media (max-width: 768px) {
     }
+  }
+  .wap-header .swiper-slide {
+    padding: 0 24px;
+    width: auto;
+    color: #666;
   }
   .ys-n{
     height: 36px;

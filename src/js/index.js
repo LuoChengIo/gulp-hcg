@@ -90,4 +90,10 @@
       prevEl: '.cswiper-prev',
     },
   });
+  new Swiper('.wap-header', {
+      freeMode: true,
+      slidesPerView: 'auto',
+      freeModeSticky: true,
+  });
+
 })()
