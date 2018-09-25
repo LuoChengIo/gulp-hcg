@@ -14,26 +14,31 @@
       playobj.height(winHeight);
     }
   }
-  var myPlayer = videojs('player-Abbreviated');
-  resizeVideo(myPlayer)
-  videojs("player-Abbreviated").ready(function(){
-    var myPlayer = this;
-    myPlayer.play();
-  });
-  $(window).resize(function(){ //窗口变化改变video
-    debouce(resizeVideo(myPlayer),300)
-  });
-  $('.palybut').on('click',function(){ // 点击播放按钮隐藏灰层，开启声音
-    $('.video-mask').hide();
-    myPlayer.muted(false);
-  })
+  if($('#player-Abbreviated').length){
+    var myPlayer = videojs('player-Abbreviated');
+    resizeVideo(myPlayer)
+    videojs("player-Abbreviated").ready(function(){
+      var myPlayer = this;
+      myPlayer.play();
+    });
+    $(window).resize(function(){ //窗口变化改变video
+      debouce(resizeVideo(myPlayer),300)
+    });
+    $('.palybut').on('click',function(){ // 点击播放按钮隐藏灰层，开启声音
+      $('.video-mask').hide();
+      myPlayer.muted(false);
+    })
+  }
+
   $(window).scroll( function() {  // 滚动监听
     debouce((function(){ // 当video不在可视区域内，暂停播放
       var winHeight = $(window).height();
       var skt = -(document.getElementById('player-Abbreviated').getBoundingClientRect().top);
       if(skt > winHeight) {
         $('.video-mask').show();
-        myPlayer.muted(true);
+        if($('#player-Abbreviated').length){
+          myPlayer.muted(true);
+        }
       }
     })(),300)
   });
