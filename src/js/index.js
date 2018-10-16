@@ -28,20 +28,19 @@
       $('.video-mask').hide();
       myPlayer.muted(false);
     })
-  }
-
-  $(window).scroll( function() {  // 滚动监听
-    debouce((function(){ // 当video不在可视区域内，暂停播放
-      var winHeight = $(window).height();
-      var skt = -(document.getElementById('player-Abbreviated').getBoundingClientRect().top);
-      if(skt > winHeight) {
-        $('.video-mask').show();
-        if($('#player-Abbreviated').length){
-          myPlayer.muted(true);
+    $(window).scroll( function() {  // 滚动监听
+      debouce((function(){ // 当video不在可视区域内，暂停播放
+        var winHeight = $(window).height();
+        var skt = -(document.getElementById('player-Abbreviated').getBoundingClientRect().top);
+        if(skt > winHeight) {
+          $('.video-mask').show();
+          if($('#player-Abbreviated').length){
+            myPlayer.muted(true);
+          }
         }
-      }
-    })(),300)
-  });
+      })(),300)
+    });
+  }
 
   // 轮播处理
   var swiper = new Swiper('.grandmaster', {
