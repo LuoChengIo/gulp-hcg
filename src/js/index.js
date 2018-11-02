@@ -26,6 +26,7 @@
     });
     $('.palybut').on('click',function(){ // 点击播放按钮隐藏灰层，开启声音
       $('.video-mask').hide();
+      myPlayer.play();
       myPlayer.muted(false);
     })
     $(window).scroll( function() {  // 滚动监听
