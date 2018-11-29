@@ -14,12 +14,20 @@
       playobj.height(winHeight);
     }
   }
+  var u = navigator.userAgent,
+    ua = window.navigator.userAgent.toLowerCase(),
+    isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //g
+    isWeiXin = ua.match(/MicroMessenger/i) == 'micromessenger';
+
   if($('#player-Abbreviated').length){
     var myPlayer = videojs('player-Abbreviated');
     resizeVideo(myPlayer)
     videojs("player-Abbreviated").ready(function(){
       var myPlayer = this;
-      myPlayer.play();
+      if(isWeiXin && isAndroid){
+      }else{
+        myPlayer.play();
+      }
     });
     $(window).resize(function(){ //窗口变化改变video
       debouce(resizeVideo(myPlayer),300)
